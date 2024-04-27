@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма Аттестации</title>
+</head>
+<body>
+    <h1>Форма Аттестации</h1>
+    <form action="/attestation" method="POST" enctype="multipart/form-data">
+        <label for="surname">Фамилия:</label><br>
+        <input type="text" id="surname" name="surname" required><br><br>
+
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="birthdate">Дата рождения:</label><br>
+        <input type="date" id="birthdate" name="birthdate" required><br><br>
+
+        <label for="department">Отдел:</label><br>
+        <input type="text" id="department" name="department" required><br><br>
+
+        <label for="photo">Фото:</label><br>
+        <input type="file" id="photo" name="photo" accept="image/*" required><br><br>
+
+        <label for="signature">Подпись:</label><br>
+        <input type="file" id="signature" name="signature" accept="image/*" required><br><br>
+
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>

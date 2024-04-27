@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welder's Profile Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-between; /* Расстояние между содержимым и фоном */
+            background: url('background-image.png') no-repeat center;
+            background-size: cover;
+            height: 100vh; /* Полная высота окна просмотра */
+            margin: 0; /* Удалить отступ по умолчанию */
+        }
+        form {
+            width: 20%; /* 20% ширины для содержимого */
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Содержимое по вертикали по центру */
+            align-items: center; /* Содержимое по горизонтали по центру */
+            background: rgba(255, 255, 255, 0.8); /* 80% прозрачный белый фон */
+            border-radius: 10px; /* Скругленные углы */
+        }
+        label {
+            margin-bottom: 10px; /* Отступ снизу для меток */
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%; /* Ширина инпутов на 100% */
+            padding: 10px; /* Отступы вокруг текста в инпутах */
+            margin-bottom: 15px; /* Отступ снизу для инпутов */
+            box-sizing: border-box; /* Размеры включая padding и border */
+        }
+        input[type="submit"] {
+            width: 100%; /* Ширина кнопки на 100% */
+            padding: 10px; /* Отступы вокруг текста в кнопке */
+            background-color: #0000FF; /* Синий цвет для кнопки */
+            color: white; /* Белый цвет текста */
+            border: none; /* Без границы */
+            border-radius: 5px; /* Скругленные углы */
+            cursor: pointer; /* Показывать указатель при наведении */
+        }
+    </style>
+</head>
+<body>
+    <form action="/welder_login" method="POST">
+        <label for="surname">Фамилия:</label>
+        <input type="text" id="surname" name="surname" required><br><br>
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Войти">
+    </form>
+</body>
+</html>

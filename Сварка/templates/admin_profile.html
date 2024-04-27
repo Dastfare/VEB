@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Администратор</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            color: #1e88e5; /* Синий цвет */
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #1e88e5; /* Синий цвет */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin: 0 10px;
+        }
+        button:hover {
+            background-color: #1565c0; /* Темно-синий цвет при наведении */
+        }
+    </style>
+</head>
+<body>
+    <h1>Администратор</h1>
+    <form action="{{ url_for('admin_redirect') }}" method="post">
+        <input type="hidden" name="action" value="welders">
+        <button type="submit">Сварщики</button>
+    </form>
+
+    <form action="{{ url_for('admin_redirect') }}" method="post">
+        <input type="hidden" name="action" value="register_welder">
+        <button type="submit">Зарегистрировать сварщика</button>
+    </form>
+</body>
+</html>
